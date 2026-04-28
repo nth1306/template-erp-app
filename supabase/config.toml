@@ -1,1 +1,23 @@
-# Supabase CLI — thêm cấu hình functions khi cần.
+# Supabase CLI config
+# Docs: https://supabase.com/docs/guides/cli/config
+
+project_id = "template-erp-app"
+
+[api]
+schemas = ["public", "storage"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 17
+
+[storage]
+file_size_limit = "50MiB"
+
+[auth]
+enabled = true
+site_url = "http://localhost:5173"
+jwt_expiry = 3600
+enable_refresh_token_rotation = true
+enable_signup = true
